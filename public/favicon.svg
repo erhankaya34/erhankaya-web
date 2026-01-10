@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#000000"/>
+  <!-- Bokor font "ek" as paths -->
+  <g fill="#8b0000" transform="translate(3, 6) scale(0.038)">
+    <!-- Letter 'e' from Bokor font -->
+    <path d="M105 285q-43 0-71-28t-28-72q0-45 28-73t72-28q35 0 60 19t33 51l-47 16q-5-19-20-31t-37-12q-27 0-44 18t-17 47q0 28 17 45t44 17q22 0 38-11t21-30l47 14q-10 34-36 54t-60 24zM85 225h70v-35H85v35z"/>
+    <!-- Letter 'k' from Bokor font -->
+    <path d="M280 280V95h50v72l65-72h60l-75 80 80 105h-62l-53-73-15 16v57h-50z"/>
+  </g>
+</svg>
