@@ -291,8 +291,9 @@ export default function Contact({ lang }: ContactProps) {
           <p>{lang === 'en' ? 'Istanbul, Turkey' : 'İstanbul, Türkiye'}</p>
         </div>
         <div className="text-center mt-6 pb-4">
-          <p className="text-sm text-blood font-medium">
-            Developed by Erhan Kaya. <span className="italic">Bugs? On purpose.</span>
+          <p className="text-sm font-medium">
+            <span className="text-bone">Developed by Erhan Kaya.</span>{' '}
+            <span className="text-blood">Bugs? On purpose.</span>
           </p>
         </div>
       </footer>

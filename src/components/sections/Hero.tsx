@@ -44,7 +44,7 @@ export default function Hero({ lang }: HeroProps) {
         opacity={0.15}
         scrollStart={0}
         scrollEnd={0.5}
-        animationOffset={0.2}
+        animationOffset={0.25}
       />
 
       {/* Static background elements */}
