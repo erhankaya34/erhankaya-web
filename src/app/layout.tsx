@@ -32,7 +32,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/favicon.svg',
+    icon: '/assets/favicon.svg',
   },
   title: "Erhan Kaya | Software Engineer & Community Builder",
   description: "Software Engineer and Community Builder based in Istanbul. Creator of Pyralis, Co-founder of IGDA Istanbul. Building bridges between technical excellence and human connection.",

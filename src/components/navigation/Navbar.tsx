@@ -85,11 +85,11 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
             {/* Logo - Skull Lottie */}
             <button
               onClick={() => scrollToSection('hero')}
-              className="group"
+              className="group flex items-center justify-center"
             >
               <div
                 ref={logoRef}
-                className="w-20 h-20 md:w-24 md:h-24"
+                className="w-12 h-12 md:w-14 md:h-14"
                 aria-label="Home"
               />
             </button>

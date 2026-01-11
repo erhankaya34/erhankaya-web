@@ -49,6 +49,16 @@ export default function Home() {
         reverseStartMode={false}
       />
 
+      {/* Halloween bats - completes at 20% scroll */}
+      <ScrollLottie
+        src="/assets/flying-bats.json"
+        className="fixed inset-0 w-screen h-screen z-[1]"
+        opacity={0.15}
+        scrollStart={0}
+        scrollEnd={0.2}
+        animationOffset={0.25}
+      />
+
       {/* High quality grain overlay */}
       <div className="grain-overlay" aria-hidden="true" />
 

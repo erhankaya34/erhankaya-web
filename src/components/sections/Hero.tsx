@@ -37,20 +37,9 @@ export default function Hero({ lang }: HeroProps) {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
 
-      {/* Flying bats Lottie - hero only */}
-      <ScrollLottie
-        src="/assets/flying-bats.json"
-        className="absolute inset-0 w-full h-full z-0 scale-[2.5]"
-        opacity={0.15}
-        scrollStart={0}
-        scrollEnd={0.5}
-        animationOffset={0.25}
-      />
-
       {/* Static background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Horizontal lines */}
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-blood/20 to-transparent" />
+        {/* Horizontal line */}
         <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-smoke-50/20 to-transparent" />
 
         {/* Corner decorations */}
@@ -63,34 +52,30 @@ export default function Hero({ lang }: HeroProps) {
 
       {/* Main content - single fade animation for whole container */}
       <motion.div
-        className="container-custom relative z-10 text-center"
+        className="container-custom relative z-10 text-center flex flex-col items-center justify-center"
         style={{ opacity, y, willChange: 'transform, opacity' }}
       >
-        {/* Pre-title label */}
-        <div className="mb-6 hero-fade hero-fade-1">
-          <span className="inline-flex items-center gap-3">
-            <span className="w-10 h-px bg-blood" />
-            <span className="text-xs text-bone-muted tracking-[0.3em] uppercase">
-              {lang === 'en' ? 'Software Engineer' : 'Yazılım Mühendisi'}
-            </span>
-            <span className="w-10 h-px bg-blood" />
-          </span>
-        </div>
-
         {/* Main title with Bokor font */}
-        <div className="relative mb-6">
+        <div className="relative mb-4">
           <h1
-            className="hero-title-sm text-bone hero-fade hero-fade-2"
+            className="hero-title-sm text-bone hero-fade hero-fade-1"
             style={{ fontFamily: "'Bokor', Georgia, serif" }}
           >
             {firstName}
           </h1>
           <h1
-            className="hero-title-sm text-blood -mt-2 md:-mt-4 hero-fade hero-fade-3"
+            className="hero-title-sm text-blood -mt-2 md:-mt-4 hero-fade hero-fade-2"
             style={{ fontFamily: "'Bokor', Georgia, serif" }}
           >
             {lastName}
           </h1>
+        </div>
+
+        {/* Title label - below name */}
+        <div className="mb-8 hero-fade hero-fade-3">
+          <span className="text-xs text-bone-muted tracking-[0.3em] uppercase">
+            {lang === 'en' ? 'Software Engineer' : 'Yazılım Mühendisi'}
+          </span>
         </div>
 
         {/* CTA Buttons - 3D press effect */}
