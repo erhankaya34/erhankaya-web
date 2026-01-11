@@ -76,13 +76,6 @@ body {
   animation: grainAnimation 8s steps(10) infinite;
 }
 
-.grain-overlay::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.1) 100%);
-  pointer-events: none;
-}
 
 @keyframes grainAnimation {
   0%, 100% { transform: translate(0, 0); }
@@ -364,12 +357,18 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 160px;
+  min-width: 140px;
   padding: 0;
   background: transparent;
   border: none;
   cursor: pointer;
   user-select: none;
+}
+
+@media (min-width: 640px) {
+  .btn-3d {
+    min-width: 160px;
+  }
 }
 
 .btn-3d-front {
@@ -379,17 +378,24 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 0.875rem 1.5rem;
   background: var(--color-blood);
   color: var(--color-bone);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   white-space: nowrap;
   box-shadow: 6px 6px 0 0 var(--color-bone);
   transform: translate(-6px, -6px);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+@media (min-width: 640px) {
+  .btn-3d-front {
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+  }
 }
 
 .btn-3d-shadow {

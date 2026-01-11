@@ -42,10 +42,10 @@ export default function Projects({ lang }: ProjectsProps) {
 
       <div className="container-custom relative">
         {/* Section header */}
-        <div className={`mb-16 section-fade ${isVisible ? 'visible' : ''}`}>
-          <div className="flex items-center gap-6 mb-4">
+        <div className={`mb-12 md:mb-16 section-fade ${isVisible ? 'visible' : ''}`}>
+          <div className="flex items-center gap-4 md:gap-6 mb-4">
             <span
-              className="text-[80px] md:text-[120px] leading-none text-blood select-none"
+              className="text-[60px] md:text-[120px] leading-none text-blood select-none"
               style={{ fontFamily: "'Bokor', Georgia, serif" }}
             >
               02

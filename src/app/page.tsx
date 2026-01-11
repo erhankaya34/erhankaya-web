@@ -13,14 +13,11 @@ export default function Home() {
   const [lang, setLang] = useState<'en' | 'tr'>('en');
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Check for stored language preference or browser language
+  // Check for stored language preference, default to English
   useEffect(() => {
     const stored = localStorage.getItem('lang') as 'en' | 'tr' | null;
     if (stored) {
       setLang(stored);
-    } else {
-      const browserLang = navigator.language.startsWith('tr') ? 'tr' : 'en';
-      setLang(browserLang);
     }
     setIsLoaded(true);
   }, []);

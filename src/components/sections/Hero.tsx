@@ -43,8 +43,8 @@ export default function Hero({ lang }: HeroProps) {
         <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-smoke-50/20 to-transparent" />
 
         {/* Corner decorations */}
-        <div className="absolute top-8 left-8 w-20 h-20 border-l border-t border-blood/20" />
-        <div className="absolute bottom-8 right-8 w-20 h-20 border-r border-b border-blood/20" />
+        <div className="absolute top-4 left-4 md:top-8 md:left-8 w-12 h-12 md:w-20 md:h-20 border-l border-t border-blood/20" />
+        <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-12 h-12 md:w-20 md:h-20 border-r border-b border-blood/20" />
 
         {/* Subtle gradient orb */}
         <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-blood/5 blur-3xl" />
@@ -109,7 +109,7 @@ export default function Hero({ lang }: HeroProps) {
         className="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 text-[10px] tracking-[0.4em] text-bone-muted/15"
         style={{ writingMode: 'vertical-rl' }}
       >
-        PORTFOLIO / 2025
+        PORTFOLIO / 2026
       </div>
     </section>
   );
