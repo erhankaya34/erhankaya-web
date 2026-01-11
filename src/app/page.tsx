@@ -41,16 +41,16 @@ export default function Home() {
       {/* Fixed full-screen Lottie background */}
       <ScrollLottie
         src="/assets/hero-animation.json"
-        className="fixed inset-0 w-screen h-screen z-0 scale-[2]"
-        opacity={0.1}
+        className="fixed inset-0 w-screen h-screen z-0 scale-[4] md:scale-[2]"
+        opacity={0.25}
         reverseStartMode={false}
       />
 
       {/* Halloween bats - completes at 20% scroll */}
       <ScrollLottie
         src="/assets/flying-bats.json"
-        className="fixed inset-0 w-screen h-screen z-[1]"
-        opacity={0.15}
+        className="fixed inset-0 w-screen h-screen z-[1] scale-150 md:scale-100"
+        opacity={0.25}
         scrollStart={0}
         scrollEnd={0.2}
         animationOffset={0.25}
