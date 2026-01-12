@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 import { personalInfo } from '@/lib/data';
 
 interface AboutProps {
@@ -62,33 +63,9 @@ export default function About({ lang }: AboutProps) {
           <div className="w-24 h-px bg-blood" />
         </div>
 
-        {/* Two column layout: Photo left, Content right */}
+        {/* Two column layout: Content left, Photo right */}
         <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 section-fade section-fade-delay-1 ${isVisible ? 'visible' : ''}`}>
-          {/* Left: Square photo placeholder */}
-          <div>
-            <div className="relative aspect-square max-w-md border border-smoke-50 bg-smoke/30 overflow-hidden">
-              {/* Corner accents */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-blood" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-blood" />
-
-              {/* Placeholder content */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div
-                    className="text-[60px] md:text-[80px] leading-none text-smoke-50/20 select-none"
-                    style={{ fontFamily: "'Bokor', Georgia, serif" }}
-                  >
-                    EK
-                  </div>
-                  <p className="text-xs text-bone-muted/30 tracking-wider uppercase mt-2">
-                    {lang === 'en' ? 'Your photo here' : 'Fotoğrafınız burada'}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Content */}
+          {/* Left: Content */}
           <div className="flex flex-col justify-center">
             {/* Current status badge */}
             <div className="mb-6">
@@ -120,6 +97,54 @@ export default function About({ lang }: AboutProps) {
               ))}
             </div>
 
+          </div>
+
+          {/* Right: Square photo */}
+          <div className="flex flex-col items-end mt-12">
+            <div className="relative aspect-square max-w-sm w-full">
+              {/* Gothic frame outer border */}
+              <div className="absolute inset-0 border-2 border-blood/40" />
+              <div className="absolute inset-2 border border-smoke-50" />
+
+              {/* Gothic corner ornaments */}
+              <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-blood" />
+              <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-blood" />
+              <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-blood" />
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-blood" />
+
+              {/* Diamond accents on edges */}
+              <div className="absolute top-1/2 -left-1.5 w-3 h-3 bg-blood rotate-45 -translate-y-1/2" />
+              <div className="absolute top-1/2 -right-1.5 w-3 h-3 bg-blood rotate-45 -translate-y-1/2" />
+              <div className="absolute -top-1.5 left-1/2 w-3 h-3 bg-blood rotate-45 -translate-x-1/2" />
+              <div className="absolute -bottom-1.5 left-1/2 w-3 h-3 bg-blood rotate-45 -translate-x-1/2" />
+
+              {/* Profile photo */}
+              <div className="absolute inset-3 overflow-hidden">
+                <Image
+                  src="/assets/profile-optimized.jpg"
+                  alt="Erhan Kaya"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                />
+              </div>
+
+              {/* Inner shadow overlay */}
+              <div className="absolute inset-3 shadow-[inset_0_0_30px_rgba(0,0,0,0.5)] pointer-events-none" />
+            </div>
+            {/* Artist credit */}
+            <p className="text-xs text-bone-muted/60 mt-2">
+              {lang === 'en' ? 'Drawn with love by ' : 'Aşkla çizildi, '}
+              <a
+                href="https://pelinakin.art"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blood font-semibold hover:underline"
+              >
+                Pelin Akın
+              </a>
+              {lang === 'tr' && ' tarafından'}
+            </p>
           </div>
         </div>
       </div>
