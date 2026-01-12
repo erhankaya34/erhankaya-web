@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import lottie, { AnimationItem } from 'lottie-web';
 
 interface ScrollLottieProps {
@@ -13,6 +13,8 @@ interface ScrollLottieProps {
   reverseStartMode?: boolean;
   // Animasyonun hangi frame'den başlayacağı (0-1 arası)
   animationOffset?: number;
+  // Animasyon bittiğinde gizle
+  hideAfterEnd?: boolean;
 }
 
 export default function ScrollLottie({
@@ -23,9 +25,11 @@ export default function ScrollLottie({
   opacity = 0.15,
   reverseStartMode = false,
   animationOffset = 0,
+  hideAfterEnd = false,
 }: ScrollLottieProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<AnimationItem | null>(null);
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -47,6 +51,13 @@ export default function ScrollLottie({
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = Math.max(0, Math.min(1, scrollTop / docHeight));
+
+        // Animasyon bittiğinde gizle
+        if (hideAfterEnd && scrollPercent > scrollEnd) {
+          setIsHidden(true);
+        } else if (hideAfterEnd) {
+          setIsHidden(false);
+        }
 
         let animProgress: number;
 
@@ -94,13 +105,13 @@ export default function ScrollLottie({
     return () => {
       anim.destroy();
     };
-  }, [src, scrollStart, scrollEnd, reverseStartMode]);
+  }, [src, scrollStart, scrollEnd, reverseStartMode, hideAfterEnd]);
 
   return (
     <div
       ref={containerRef}
-      className={`pointer-events-none ${className}`}
-      style={{ opacity }}
+      className={`pointer-events-none transition-opacity duration-300 ${className}`}
+      style={{ opacity: isHidden ? 0 : opacity }}
       aria-hidden="true"
     />
   );

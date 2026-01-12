@@ -54,6 +54,7 @@ export default function Home() {
         scrollStart={0}
         scrollEnd={0.2}
         animationOffset={0.25}
+        hideAfterEnd={true}
       />
 
       {/* High quality grain overlay */}

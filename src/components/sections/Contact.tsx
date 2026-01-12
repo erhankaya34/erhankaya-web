@@ -48,10 +48,11 @@ export default function Contact({ lang }: ContactProps) {
     setStatus('submitting');
 
     try {
-      const response = await fetch('https://formspree.io/f/xpwzgwjr', {
+      const response = await fetch('https://formspree.io/f/xdaaozve', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify(formData),
       });
