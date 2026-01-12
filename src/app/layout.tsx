@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/favicon.svg',
   },
-  title: "Erhan Kaya | Software Engineer & Community Builder",
-  description: "Software Engineer and Community Builder based in Istanbul. Creator of Pyralis, Co-founder of IGDA Istanbul. Building bridges between technical excellence and human connection.",
-  keywords: ["Software Engineer", "Community Builder", "Game Developer", "Istanbul", "Turkey", "IGDA", "Pyralis"],
+  title: "Erhan Kaya | Software Engineer",
+  description: "Software Engineer based in Istanbul. Creator of Pyralis, Co-founder of IGDA Istanbul.",
+  keywords: ["Software Engineer", "Game Developer", "Istanbul", "Turkey", "IGDA", "Pyralis"],
   authors: [{ name: "Mustafa Erhan Kaya" }],
   creator: "Mustafa Erhan Kaya",
   openGraph: {
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://erhankaya.dev",
     siteName: "Erhan Kaya",
-    title: "Erhan Kaya | Software Engineer & Community Builder",
-    description: "Software Engineer and Community Builder based in Istanbul. Building bridges between technical excellence and human connection.",
+    title: "Erhan Kaya | Software Engineer",
+    description: "Software Engineer based in Istanbul. Creator of Pyralis, Co-founder of IGDA Istanbul.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Erhan Kaya | Software Engineer & Community Builder",
-    description: "Software Engineer and Community Builder based in Istanbul.",
+    title: "Erhan Kaya | Software Engineer",
+    description: "Software Engineer based in Istanbul.",
   },
   robots: {
     index: true,

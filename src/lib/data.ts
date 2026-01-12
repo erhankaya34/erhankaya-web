@@ -3,8 +3,8 @@ export const personalInfo = {
   displayName: "Erhan Kaya",
   title: "Software Engineer",
   tagline: {
-    en: "Software Engineer & Community Builder",
-    tr: "Yazılım Mühendisi & Topluluk Kurucusu"
+    en: "Software Engineer",
+    tr: "Yazılım Mühendisi"
   },
   location: "Istanbul, Turkey",
   email: "erhankaya3470@gmail.com",
